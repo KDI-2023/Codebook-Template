@@ -1,0 +1,110 @@
+\documentclass[UKenglish]{beamer}
+
+
+\usepackage[utf8]{inputenx} % For æ, ø, å
+\usepackage{babel}          % Automatic translations
+\usepackage{csquotes}       % Quotation marks
+\usepackage{microtype}      % Improved typography
+\usepackage{amssymb}        % Mathematical symbols
+\usepackage{mathtools}      % Mathematical symbols
+\usepackage[absolute, overlay]{textpos} % Arbitrary placement
+\setlength{\TPHorizModule}{\paperwidth} % Textpos units
+\setlength{\TPVertModule}{\paperheight} % Textpos units
+\usepackage{tikz}
+\usetikzlibrary{overlay-beamer-styles}  % Overlay effects for TikZ
+
+\setlength{\parskip}{1em}\setlength{\parskip}{1em}
+
+
+
+\usetheme[NoLogo]{MathDept}
+
+
+\title{`project name'}
+\subtitle{\texttt{KDI Demo Presentation}}
+
+
+\begin{document}
+% Use
+%
+%     \begin{frame}[allowframebreaks]
+%
+% if the TOC does not fit one frame.
+
+\frame{
+    \frametitle{Contributors}
+    \alert{Real names should substitute the current place holders.}
+    \begin{itemize}
+        \item Data Scientist: Ann
+        \item Data Scientist: Bob
+        \item Domain Expert: Carol
+        \item Knowledge Engineer: David
+        \item Knowledge Engineer: Ed
+        \item Project Manager: Fred
+        \item Tutor Data: Green
+        \item Tutor Knowledge: Helen
+    \end{itemize}
+
+}
+
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+
+\section{Project description}
+\frame{
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+}
+\frame{
+    \frametitle{Project description}
+    The first section should describe briefly the project, reporting the domain and the objectives that the project wants to achieve.
+}
+
+
+\section{DKG description}
+\frame{
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{DKG description}
+    This section reports information on the final Data Knowledge Graph, describing the data associated to the relative knowledge, and showing the achievement of the objectives of the project. Consider for this description ONLY the portion of data used in the Demo, not all the KG.
+}
+
+\section{Use cases}
+\frame{
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Use cases}
+    This section aims to demonstrate the usage of the Knowledge Graph (KG) produced, showing how the users can exploit the KG to obtain the results needed.// 
+    More in details, has to be reported://
+    \begin{itemize}
+        \item the input user requests;
+        \item the subsequent queries on the KG elements requested;
+        \item the navigation on the KG to collect all the information needed.
+    \end{itemize}
+    The use cases showed in this way have to include operation on Core, Common and Contextual data type considered in the KG.//
+    
+    Hint: report the use cases related to the Scenarios & Personas defined (1-2 slides per use case).
+}
+
+\section{Notes}
+
+\frame{
+    \frametitle{Notes}
+    The Demo (or the Demo video) has to be published on line and be available through a link.
+    Report the link in the end of this set of slides.
+}
+
+
+
+
+
+\end{document} 

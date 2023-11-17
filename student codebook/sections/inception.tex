@@ -1,0 +1,175 @@
+\subsection{Inception}
+This section is dedicated to the Inception phase description. Here are reported the initial definitions for CQs (Competency Queries), initial datasets collected and the relative metadata. For each of those elements the procedures
+and the tools adopted to achieve the results, have to be reported in the sections below.
+
+\subsubsection{Scenarios of usages}
+
+\item
+\textbf{Actor}: Jerry, 20
+\item
+\textbf{Scenario}: Jerry is an undergraduate from Jilin University who is about to graduate. After graduation, he plans to continue to study and work in Changchun and settle down. He is full of enthusiasm for life. In addition to studying and working, he likes to stroll around vibrant places. In the hard work phase of entering society, he will not consider starting a family for the time being, so he only wants to buy a single apartment.
+
+
+\item
+\textbf{Actor}: Tom & Mary
+\item
+\textbf{Scenario}: Tom, 30, has worked in Changchun for many years and has a stable and expensive income. Mary, 28, is a full-time housewife. Recently, their family had a happy event ——birth of a twin. But now their house areas only 60 square meters, which is not enough for the basic living needs of a family of four. They want to buy a three-bedroom and one-living school district house of more than 120 square meters in downtown Changchun.
+
+
+\item
+\textbf{Actor}: Alex, 60
+\item
+\textbf{Scenario}: As a successful person who has worked hard for decades in the business world, Alex has reached the age of retirement. He is tired of the hustle and bustle of the city centre and wants to find the joy of life with his wife. They hope to buy a villa or townhouse in the suburbs of Changchun to get closer to nature.
+
+\subsubsection{CQs definition}
+This subsection is dedicated to the definition of the Competency Queries. They have to be listed and explained with details in order to have the information they bring, as clear as possible. This section plays a crucial role in the project description due to the fact that the CQs are the starting point to define the single objects/entities involved in the KG. For this reason the CQs will be used in the next phases as evaluation base to define the quality of the outcomes of each phase. 
+
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\begin{table}
+    \Large
+    \caption{Query Description}  
+    \begin{center}
+    \begin{tabular}{|p{2.3cm}|p{12.1cm}|}    %{|l|l|}
+    %%\resizebox{\textwidth}{12mm}
+    %%表格的宽度需要调整
+    \hline  
+    Actor & Query \\  
+    \hline  
+    Jerry & \tabincell{l}{As a newly graduated undergraduate, his financial\\ strength is still weak, and he has reasonable \\expectations about the average price of a house when \\purchasing a house.} \\
+    \hline
+    Jerry & \tabincell{l}{Expecting to purchase a single apartment since there is\\ no need to start a family.} \\
+    \hline
+    Jerry & \tabincell{l}{Due to his personal hobby of going to lively places for\\ shopping, he has certain requirements for the traffic\\ around the house.}\\
+    \hline
+    Tom Mary & \tabincell{l}{With years of stable work experience, they have a good\\ financial base and can consider buying a high quality\\ house with a high price.} \\
+    \hline
+    Tom Mary & \tabincell{l}{With the new addition to the family, the existing house\\ is too small to meet the needs of a family of four, so \\when buying a house, they consider the need for a\\ larger area.} \\
+    \hline
+    Tom Mary & \tabincell{l}{When the baby grows up, the parents need to have\\ independent space, and the parents need to allocate a \\suite to each of the two children on the basis of a \\separate room, so they need to purchase a house with\\ three rooms and a hall.} \\
+    \hline
+    Tom Mary & \tabincell{l}{The two couples showed a desire to purchase a house in\\ the city center.}\\
+    \hline
+    Alex & \tabincell{l}{Tired of the city center and wanting to live quietly with\\ his wife, he has the desire to live away from the hustle\\ and bustle of the city center and be close to nature, \\and is considering purchasing a house in a location far \\from the city.} \\
+    \hline
+    Alex & \tabincell{l}{As successful businessmen, they are naturally \\well-off, and villas and townhouses are the types of\\ houses they want to buy.} \\
+    \hline  
+    \end{tabular}
+    \end{center}
+    \end{table} 
+    
+    
+\subsubsection{Initial Datasets description}
+Since we concentrate on offering suitable houses for buyers in Changchun,we decided to use the data of houses located in Changchun. In order to get enough data about houses, we browsed several webs and finally chose the website \url{https://cc.58.com/xinfang/} which is one of the biggest websites to buy houses. We utilized BeautifulSoup to crawl data from it. And the listed houses contain information about its name,its location,its type,its area and its price per square meter. In order to combine the transportation information with information of house, We used the same way to crawl the dataset of transportation in the website \url{https://cc.fang.ke.com/loupan}, which contains the opening time and average price of houses as well.
+\subsubsection{Datasets metadata documentation}
+We have collected three datasets and are overall information of the houses,additional information of the houses and light railways and their relative houses.  here are the matadata tables about them respectively.
+    \begin{table}[!htbp]  
+    \Large
+    \caption{Overall information of the houses}  
+    \begin{center}
+    \begin{tabular}{|p{4.3cm}|p{13cm}|}%{|l|l|}  
+    \hline  
+    Field Name & Description \\  
+    \hline  
+    Dataset Description & This dataset concludes overall information of the houses \\
+    \hline
+    Dataset Source & 58.com \\  
+    \hline
+    Language & Chinese \\
+    \hline
+    Ownership & 58.com \\
+    \hline
+    URL & \url{https://cc.58.com/xinfang/} \\
+    \hline
+    Format & Json \\
+    \hline  
+    Attributes & name,location,type,area and price \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}  
+    
+    \begin{table}[!htbp]  
+    \Large
+    \caption{additional information of the houses}  
+    \begin{center}
+    \begin{tabular}{|p{4.3cm}|p{13cm}|}%{|l|l|}  
+    \hline  
+    Field Name & Description \\  
+    \hline  
+    Dataset Description & This dataset concludes additional information of the houses \\
+    \hline
+    Dataset Source & ke.com \\  
+    \hline
+    Language & Chinese \\
+    \hline
+    Ownership & ke.com \\
+    \hline
+    URL & \url{https://cc.fang.ke.com/loupan} \\
+    \hline
+    Format & Json \\
+    \hline 
+    Attributes & name,price and the opening time \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}  
+    
+    \begin{table}[!htbp]  
+    \Large
+    \caption{light railways and their relative houses}  
+    \begin{center}
+    \begin{tabular}{|p{4.3cm}|p{13cm}|}%{|l|l|}  
+    \hline  
+    Field Name & Description \\  
+    \hline  
+    Dataset Description & This dataset concludes some local light railways and houses on sale nearby.  \\
+    \hline
+    Dataset Source & ke.com \\  
+    \hline
+    Language & Chinese \\
+    \hline
+    Ownership & ke.com \\
+    \hline
+    URL & \url{https://cc.fang.ke.com/loupan/li8740130349630421/#8740130349630421}(an example of the concrete format ) \\
+    \hline
+    Format & Json \\
+    \hline  
+    Attributes & name,price and the opening time \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}  
+
+    \begin{table}[!htbp]  
+    \Large
+    \caption{The information of schools}  
+    \begin{center}
+    \begin{tabular}{|p{4.3cm}|p{13cm}|}%{|l|l|}  
+    \hline  
+    Field Name & Description \\  
+    \hline  
+    Dataset Description & This dataset concludes the information of schools in Changchun.  \\
+    \hline
+    Dataset Source & Amap \\  
+    \hline
+    Language & Chinese \\
+    \hline
+    Ownership & Amap \\
+    \hline
+    URL & \url{https:https://restapi.amap.com/v3/place/text?}(and with some addtional parameters) \\
+    \hline
+    Format & Json \\
+    \hline  
+    Attributes & name,type,longitude,latitude,address \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}  
+    
+    
+\subsubsection{Datasets collection process}
+There is no available database to construct a knowledge graph about buying houses in Changchun, so we tried to use web-scraping tools to get the data from the website mentioned in 2.2.2. Considering the convenience of Python in web-scraping, we used the 'BeautifulSoup' package of Python to obtain the acquired data. And in the Python script we extract the important attributes about each house as mentioned above. And to identify whether a house is school district house or not we used the API of Amap to obtain all the information of schools in Changchun. Finally, we got all our initiative datasets.
+
+%\subsubsection{Inception level evaluation}
+%The last section of the Inception phase report the evaluation %of the outcomes obtained in this phase, through specif %evaluation metrics. 

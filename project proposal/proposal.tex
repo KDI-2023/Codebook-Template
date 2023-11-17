@@ -1,0 +1,128 @@
+\documentclass[UKenglish]{beamer}
+
+
+\usepackage[utf8]{inputenx} % For æ, ø, å
+\usepackage{babel}          % Automatic translations
+\usepackage{csquotes}       % Quotation marks
+\usepackage{microtype}      % Improved typography
+\usepackage{amssymb}        % Mathematical symbols
+\usepackage{mathtools}      % Mathematical symbols
+\usepackage[absolute, overlay]{textpos} % Arbitrary placement
+\setlength{\TPHorizModule}{\paperwidth} % Textpos units
+\setlength{\TPVertModule}{\paperheight} % Textpos units
+\usepackage{tikz}
+\usetikzlibrary{overlay-beamer-styles}  % Overlay effects for TikZ
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\setlength{\parskip}{1em}
+
+\usetheme[NoLogo]{MathDept}
+
+
+\title{KDI Project Proposal Template}
+\author{KDI 2020 Project Proposal}
+
+
+\begin{document}
+
+\frame{
+    \frametitle{Contents}
+    \tableofcontents
+}
+
+\section{Domain Description}
+\frame{
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Buy-a-house Project} \vspace{6mm}
+Buying a house is a question that any young person entering society or a family considering changing a house must consider. It is a question that requires comprehensive evaluation. The housing sector includes at least factors such as geographic location, area, transportation, housing prices, and living convenience.\\\vspace{5mm}
+Our housing project will integrate four main aspects of data according to actual problems, namely: housing price, area, location, and house type.\\\vspace{5mm}
+  The aim of the project is to create a modularized Knowledge
+Graph (KG) on house choice for data integration, using the
+iTelos Methodology.
+}
+
+\section{Competency Queries}
+\frame{
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Competency Queries}\vspace{6mm}
+    {If I want to buy a house near a primary school and the cost is under 1 million yuan, what house suits me most?}\\\vspace{6mm}
+   {If I want a house which suits for a four-member family,what should I choose?}\\ \vspace{6mm}
+   {Recommend a house in downtown area whose space is over 100 square metres.}
+    
+}
+\section{Standards}
+\frame{
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\frame{
+    \frametitle{Standards}\vspace{6mm}
+    To follow the standards adopted in the datasets collected:
+    \\\vspace{1cm}
+\bullet INSPIRE \\ \vspace{6mm}
+\bullet GTFS \\ \vspace{6mm}
+\bullet iCal \\ \vspace{6mm}
+\bullet .....
+}
+
+\section{Knowledge Resources}
+\frame{
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\frame{
+    \frametitle{Knowledge Resources}\vspace{6mm}
+    According to basic human common sense, we have the following prior knowledge:
+    
+    
+    The neighborhood is the main entity in our study. In general, the name of a plot can uniquely represent the plot entity itself. Otherwise, we cannot be sure that the same plot name identifies the same plot in two databases, and the query results obtained by linking heterogeneous databases would not correspond to the reality.
+    
+    
+    This provides support for the reliability of the query results.
+    
+}
+
+\section{Data Resources}
+\frame{
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\frame{
+    \frametitle{Data Resources}\vspace{6mm}
+    
+    This section contains some example of resources at data level, that have to be considered, and will be collected during the development project. In other words, here are reported some samples datastes, if available, and/or some example of data sources from which retrieve the data.
+    
+}
+
+\section{Outcomes}
+\frame{
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\frame{
+    \frametitle{Outcomes}\vspace{6mm}
+    The final section of this template is dedicated to the outcomes of the project:\\
+    \begin{itemize}
+        \item Which are the features that the KG has to have, at both knowledge and data level. 
+        \item How the final KG will solve the problem initially defined. 
+    \end{itemize}
+}
+
+
+
+\end{document} 

@@ -1,0 +1,203 @@
+\documentclass[UKenglish]{beamer}
+
+
+\usepackage[utf8]{inputenx} % For æ, ø, å
+\usepackage{babel}          % Automatic translations
+\usepackage{csquotes}       % Quotation marks
+\usepackage{microtype}      % Improved typography
+\usepackage{amssymb}        % Mathematical symbols
+\usepackage{mathtools}      % Mathematical symbols
+\usepackage[absolute, overlay]{textpos} % Arbitrary placement
+\setlength{\TPHorizModule}{\paperwidth} % Textpos units
+\setlength{\TPVertModule}{\paperheight} % Textpos units
+\usepackage{tikz}
+\usetikzlibrary{overlay-beamer-styles}  % Overlay effects for TikZ
+
+\setlength{\parskip}{1em}\setlength{\parskip}{1em}
+
+
+
+\usetheme[NoLogo]{MathDept}
+
+
+\title{`project name'}
+\subtitle{\texttt{KDI Final Presentation}}
+
+
+\begin{document}
+% Use
+%
+%     \begin{frame}[allowframebreaks]
+%
+% if the TOC does not fit one frame.
+
+\frame{
+    \frametitle{Contributors}
+    \alert{Real names should substitute the current place holders, and the sections presented will be not indicated}
+    \begin{itemize}
+        \item Data Scientist: Ann (Speaker on sections: 3)
+        \item Data Scientist: Bob (Speaker on sections: 3)
+        \item Domain Expert: Carol (Speaker on sections: 2)
+        \item Knowledge Engineer: David (Speaker on sections: 4, 5)
+        \item Knowledge Engineer: Ed (Speaker on sections: 4, 5)
+        \item Project Manager: Fred (Speaker on sections: 1, 6, 7, 8)
+        \item Tutor Data: Green
+        \item Tutor Knowledge: Helen
+    \end{itemize}
+
+}
+
+\begin{frame}
+    \flushright\frametitle{Table of Contents}
+    \newline
+    \tableofcontents
+
+\end{frame}
+
+
+\section{Project description}
+\frame{
+    \tableofcontents[currentsection]
+}
+\frame{
+    \frametitle{Project description}
+    The first section should describe briefly the project, reporting the domain and the objectives that the project wants to achieve. Moreover a description of the possible usage scenarios can be reported here to better explain the purpose of the project. 
+}
+
+\section{Initial definitions}
+\frame{
+    \tableofcontents[currentsection]
+}
+\frame{
+    \frametitle{Initial definitions}
+    This sections aims to describe the work during the first definition phase. How the definitions of the main objects in the context, have been achieved. More in detail the questions to be answered here are: 
+    \begin{itemize}
+        \item Which are the CQs extracted from the scenarios ?
+        \item How did you extract the main objects from the CQs ?
+        \item Did you find difficulties in the definitions  of these elements ? If yes, try to explain those.
+    \end{itemize}
+}
+
+\section{Data resources}
+\frame{
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Data resources}
+    Here the presentation has the objective to describe the process of data collection and the subsequent data management, starting from the data sources identification until the final version of the datasets.
+    In order to describe this process the main question to be answered are:
+    
+    \begin{itemize}
+        \item How did you find the data sources needed ?
+        \item How did you collect the datasets from those sources ?
+        \item Which were the difficulties obtaining the datasets needed ? 
+        \item Explain the relation between the scenarios defined and the datasets research.
+        \item How much you needed to modify (cleaning and formatting operations) the datasets collected during the project ?
+    \end{itemize}
+    
+    Take into account the description of the tools have been used to manage those resources, why and how you used it, as well as describe eventually new procedures, developed by you, used during the project.
+}
+
+\section{Knowledge resources}
+\frame{
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Knowledge resources}
+    Here the presentation has the objective to describe the process of Knowledge definition, starting from the definition of the main objects (Core, Common and Contextual) until the generation of the SKG.
+    In order to describe this process the main question to be answered are:
+    
+    \begin{itemize}
+        \item How you define the informal schema starting from the main objects identified ?
+        \item What were the difficulties defining the schema ? 
+        \item How did you solve them across the iterations in the schema generation process ?
+        \item Describe the formalization of the schema ?
+        \item Which new concepts and language definitions have been used ?
+        \item How much did you share Knowledge resources among other projects ? (describe the interaction with the other teams)
+        
+    \end{itemize}
+    
+    Take into account the description of the tools have been used to manage those resources, why and how you used it, as well as any difficulties you discovered using them.
+}
+
+\section{Metadata}
+\frame{
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Metadata collection}
+    Here the presentation has the objective to describe the Metadata collection process, in all the Methodology phases. In order to describe this process, try to answer the following questions:
+    \begin{itemize}
+        \item Which metadata did you find associated to the initial datasets collected ?
+        \item Which are the metadata you added to the datasets collected ? Why ?
+        \item Which are the metadata you defined on the Knowledge resources used to create the SKG ?
+        \item Do you think that your set of metadata gives a good level of quality to the KG you produced ? try to explain your answer.
+        \item Did you find difficulties defining the metadata ?
+    \end{itemize}
+}
+
+\section{General Problems and Solutions}
+\frame{
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Problems and Solutions}
+    The section describes the general obstacles encountered in the project and how did you conquer them.
+    A "General problem" means, a difficulty regarding the Methodology or, for example regarding the domain or context you choose to work into. Try to motivate the solution adopted to solve these problems.
+}
+
+\section{Outcome and Analytics}
+\frame{
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Outcome and Analytics}
+    
+    This section aims to describe the final result you achieved. More in detail try to answer the following questions:
+    \begin{itemize}
+        \item The KG you obtained can solve the CQs related to the scenarios defined ?
+        
+        \item Is the navigation of the KG over the information requested by the scenarios, satisfying ? 
+
+        \item Provide analytics data on the KG, such as Number of Concepts, Number of Entities, Number of Relations, and so on ..
+        
+        \item Provide the results of the evaluation performed during the project.
+        
+    \end{itemize}
+}
+
+\section{Open issues}
+\frame{
+    \tableofcontents[currentsection]
+}
+
+\frame{
+    \frametitle{Open issues}
+    
+    This final section aims to describe issues eventually remained open developing the project. More in detail try to answer the following questions:
+    \begin{itemize}
+        \item Have you been able to represent, and include in the KG, all the information requested in the first definition phase? 
+        \item What were the most difficult data and knowledge resources that have been represented and managed in the KG ?
+        \item There are any data and/or Knowledge resources that have not been involved in the KG ? if yes, why ?
+        \item Explain any other problem you have not been able to solve during the project.
+    \end{itemize}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 

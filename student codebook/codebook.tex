@@ -1,0 +1,85 @@
+\documentclass{knowdive}
+\usepackage{color,soul}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage[table,xcdraw]{xcolor}
+
+
+
+
+
+
+
+
+
+\usepackage{amsthm}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\graphicspath{ {images/} }
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[toc]{glossaries}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\setlength\parindent{0pt}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\title{Buy a House}
+\docdata{- 2020-12-10 -}
+\author{- Zhejian Fang, Yanhao Sun, Zhiyuan Wu -}
+
+\revisionhistory{
+    %\revision{0.1}{06.05.2020}{Luigi Brunetta}{Document Created with simple index}
+}
+
+\fancypagestyle{plain}{
+  \fancyhf{}% Clear header/footer
+  %\fancyhead[R]{\includegraphics[width=1.0\linewidth,height=5pt]{Knowdive_color_bar}}% Right header
+  \fancyfoot[L]{\includegraphics[width=1.0\linewidth,height=45pt]{Knowdive_color_bar}}% Left footer
+  \fancyfoot[C]{Page \thepage\  / \pageref{LastPage}}
+}
+\pagestyle{plain}
+
+\makeglossaries
+
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+\maketitle
+\pagenumbering{roman}
+\printglossary[title=Glossary, toctitle=Glossary]
+\newpage
+
+\pagenumbering{arabic}
+
+\input{student codebook/sections/knowledge-graph-codebook}
+\input{student codebook/sections/knowledge-graph-dev}
+
+\newpage
+\bibliographystyle{amsplain}
+\bibliography{reference}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
